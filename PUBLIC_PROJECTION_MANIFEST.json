@@ -12,6 +12,17 @@
   "software_license_status": "OWNER_LICENSE_DECISION_REQUIRED",
   "included_files": [
     {
+      "destination_path": ".github/workflows/research-integrity.yml",
+      "source_path": null,
+      "source_git_blob": null,
+      "source_sha256": null,
+      "destination_sha256": "a41951f3bb844b231a310b22bb370f13a033114d75b1a6b6a319a95e1e298aa9",
+      "bytes_exact": false,
+      "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
+      "purpose": "pinned RC2 mechanical inventory CI workflow",
+      "rights_class": "AUTHOR_OWNED_RIGHTS_CONFIRMED"
+    },
+    {
       "destination_path": ".gitignore",
       "source_path": null,
       "source_git_blob": null,
@@ -20,6 +31,17 @@
       "bytes_exact": false,
       "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
       "purpose": "projection exclusion policy",
+      "rights_class": "AUTHOR_OWNED_RIGHTS_CONFIRMED"
+    },
+    {
+      "destination_path": ".rak/policy.yaml",
+      "source_path": null,
+      "source_git_blob": null,
+      "source_sha256": null,
+      "destination_sha256": "d3663080e3a7b5a0ad2b84e750828e6a2bc5be1313ae8d89e1c19db3fa60a057",
+      "bytes_exact": false,
+      "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
+      "purpose": "consumer-specific mechanical repository inventory policy",
       "rights_class": "AUTHOR_OWNED_RIGHTS_CONFIRMED"
     },
     {
@@ -71,7 +93,7 @@
       "source_path": null,
       "source_git_blob": null,
       "source_sha256": null,
-      "destination_sha256": "b7f1749554f34c0d0815096139048f43ce1a82fed6ef1d63f78658b8342faaaf",
+      "destination_sha256": "ef2f6a2e35f0641e256ac0b0195975edd2788ba53350fd95c9c34bebe3f1d94e",
       "bytes_exact": false,
       "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
       "purpose": "public project entrance",
@@ -432,5 +454,14 @@
     "third-party content without confirmed redistribution rights",
     "machine-local metadata and absolute local paths"
   ],
-  "manifest_self_reference_policy": "PUBLIC_PROJECTION_MANIFEST.json is omitted from included_files to avoid a recursive self-hash; its exact bytes are bound by the independent Git commit and verification report."
+  "manifest_self_reference_policy": "PUBLIC_PROJECTION_MANIFEST.json is omitted from included_files to avoid a recursive self-hash; its exact bytes are bound by the independent Git commit and verification report.",
+  "researchauditkit_integration": {
+    "use": "MECHANICAL_REPOSITORY_INTEGRITY_PREFLIGHT",
+    "command": "rak inventory",
+    "release": "v0.1.0-rc.2",
+    "tag_target": "967685bc313242dc1654665fd8516b5937f3fd59",
+    "wheel": "research_audit_kit-0.1.0rc2-py3-none-any.whl",
+    "wheel_sha256": "71f905f3e39907c72c18e3d3207004f424c001238b103235a16484e1acace0fb",
+    "scientific_validity_claim": "NONE"
+  }
 }

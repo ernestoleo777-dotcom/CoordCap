@@ -1,0 +1,61 @@
+policy:
+  id: coordcap-public-projection-v1
+  include_patterns:
+    - .gitignore
+    - .github/workflows/research-integrity.yml
+    - .rak/policy.yaml
+    - ASSET_PROVENANCE.md
+    - CITATION.cff
+    - LICENSE_STATUS.md
+    - PROJECT_STATUS.md
+    - PUBLIC_PROJECTION_MANIFEST.json
+    - README.md
+    - THIRD_PARTY_NOTICES.md
+    - protocol_freeze.json
+    - requirements.lock.txt
+    - coordcap/*.py
+    - scripts/*.py
+    - tests/*.py
+  exclude_patterns:
+    - .git/**
+    - .venv/**
+    - .pytest_cache/**
+    - '**/__pycache__/**'
+    - '**/*.pyc'
+    - audit/researchauditkit/**
+    - outputs/**
+    - results/**
+    - data/**
+    - paper/**
+    - '**/*.pdf'
+    - '**/*.pt'
+    - '**/*.pth'
+    - '**/*.ckpt'
+    - '**/*.safetensors'
+    - '*.whl'
+  volatile_patterns:
+    - .DS_Store
+  required_files:
+    - README.md
+    - PROJECT_STATUS.md
+    - LICENSE_STATUS.md
+    - CITATION.cff
+    - THIRD_PARTY_NOTICES.md
+    - ASSET_PROVENANCE.md
+    - PUBLIC_PROJECTION_MANIFEST.json
+    - protocol_freeze.json
+    - requirements.lock.txt
+    - coordcap/__init__.py
+    - scripts/generate_coordcap.py
+    - tests/test_generator.py
+    - .rak/policy.yaml
+    - .github/workflows/research-integrity.yml
+  warning_only_classes:
+    - volatile_metadata
+  failure_classes:
+    - scientific_asset
+  unexpected_scientific_file_policy: fail
+  metadata:
+    scope: mechanical_repository_integrity_preflight
+    tool_release: v0.1.0-rc.2
+    scientific_validity_claim: none

@@ -1,0 +1,44 @@
+name: ResearchAuditKit integrity preflight
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install pinned ResearchAuditKit RC2 artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          wheel="$RUNNER_TEMP/research_audit_kit-0.1.0rc2-py3-none-any.whl"
+          curl --location --fail --show-error \
+            --output "$wheel" \
+            https://github.com/ernestoleo777-dotcom/ResearchAuditKit/releases/download/v0.1.0-rc.2/research_audit_kit-0.1.0rc2-py3-none-any.whl
+          echo "71f905f3e39907c72c18e3d3207004f424c001238b103235a16484e1acace0fb  $wheel" \
+            | sha256sum -c -
+          python -m pip install "$wheel"
+          test "$(rak --version)" = "rak 0.1.0rc2"
+
+      - name: Run mechanical repository inventory
+        shell: bash
+        run: |
+          set -euo pipefail
+          out="$RUNNER_TEMP/researchauditkit"
+          rak inventory \
+            --root "$GITHUB_WORKSPACE" \
+            --policy .rak/policy.yaml \
+            --out "$out"
+          python -c 'import json, os, pathlib; p=pathlib.Path(os.environ["RUNNER_TEMP"])/"researchauditkit"; summary=json.loads((p/"summary.json").read_text()); assert summary["status"] == "PASS" and summary["missing_required"] == 0, summary; rows=json.loads((p/"inventory.json").read_text())["assets"]; bad=[r["path"] for r in rows if r["category"] in {"generated_artifact", "cache", "temporary_file", "volatile_metadata"} and not r["path"].startswith(".git/")]; assert not bad, bad'

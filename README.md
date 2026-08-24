@@ -34,6 +34,12 @@ python -m pytest -q tests
 
 These checks do not reproduce the accepted experimental results.
 
+## Mechanical repository integrity
+
+The local projection pins ResearchAuditKit `v0.1.0-rc.2` for a deterministic `rak inventory` preflight. The CI workflow downloads the exact GitHub Release wheel, verifies SHA-256 `71f905f3e39907c72c18e3d3207004f424c001238b103235a16484e1acace0fb`, and writes reports only to temporary runner storage.
+
+ResearchAuditKit checks declared repository files and forbidden transient-output patterns mechanically. Passing this preflight does not validate CoordCap's scientific claims, experimental conclusions, novelty, acceptance status, correctness, or reproducibility. ResearchAuditKit is a prerelease and is not installed from PyPI.
+
 ## Repository provenance
 
 - [Projection manifest](PUBLIC_PROJECTION_MANIFEST.json)
