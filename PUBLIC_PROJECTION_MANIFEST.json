@@ -9,7 +9,7 @@
     "version": "UNSPECIFIED_SESSION_BUILD"
   },
   "projection_mode": "DEFAULT_DENY_EXPLICIT_ALLOWLIST",
-  "software_license_status": "OWNER_LICENSE_DECISION_REQUIRED",
+  "software_license_status": "Apache-2.0_AUTHOR_OWNED_CODE_AND_ORIGINAL_DOCUMENTATION",
   "included_files": [
     {
       "destination_path": ".github/workflows/research-integrity.yml",
@@ -38,7 +38,7 @@
       "source_path": null,
       "source_git_blob": null,
       "source_sha256": null,
-      "destination_sha256": "d3663080e3a7b5a0ad2b84e750828e6a2bc5be1313ae8d89e1c19db3fa60a057",
+      "destination_sha256": "9be22af2580ec8a179bdabb1919fb03078a9372c36b0e5f327952f9c7c7d5df6",
       "bytes_exact": false,
       "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
       "purpose": "consumer-specific mechanical repository inventory policy",
@@ -49,7 +49,7 @@
       "source_path": null,
       "source_git_blob": null,
       "source_sha256": null,
-      "destination_sha256": "2d19b3d12dad04dfd583125b1f725b24f66b78f1e3e610de229be9977915e571",
+      "destination_sha256": "3f0980000a5044f66bdcfe0f33cd058cc68f98c380b67a0e86f3af04e13dee6b",
       "bytes_exact": false,
       "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
       "purpose": "public provenance summary",
@@ -60,10 +60,21 @@
       "source_path": null,
       "source_git_blob": null,
       "source_sha256": null,
-      "destination_sha256": "6efcebedd44f61d14744162e8c5c49fac13346c93e1c9813c7ec36764c663848",
+      "destination_sha256": "48b86a4ed26865acd1e6587ec15293febd0fa4463dfdd5fcd80f0ef42320d955",
       "bytes_exact": false,
       "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
       "purpose": "public citation metadata",
+      "rights_class": "AUTHOR_OWNED_RIGHTS_CONFIRMED"
+    },
+    {
+      "destination_path": "LICENSE",
+      "source_path": null,
+      "source_git_blob": null,
+      "source_sha256": null,
+      "destination_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes_exact": false,
+      "transformation": "AUTHORITATIVE_APACHE_ORG_LICENSE_TEMPLATE_UNMODIFIED",
+      "purpose": "Apache License 2.0 text for author-owned code and original documentation",
       "rights_class": "AUTHOR_OWNED_RIGHTS_CONFIRMED"
     },
     {
@@ -71,7 +82,7 @@
       "source_path": null,
       "source_git_blob": null,
       "source_sha256": null,
-      "destination_sha256": "c9ab4354ddc46ac841c6e5bcfc2351c2f261a34f18cfcf0b3a98e3cde246fd90",
+      "destination_sha256": "20c6dcb729d408db507b196cafe6e96779561f9777b68e5fa836d1ef3fac7ca5",
       "bytes_exact": false,
       "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
       "purpose": "public license decision boundary",
@@ -82,7 +93,7 @@
       "source_path": null,
       "source_git_blob": null,
       "source_sha256": null,
-      "destination_sha256": "f2b47ec9f13056d3de21c5e5b2187ad89a3b2e615d0c9dbb55a1c62142737ce0",
+      "destination_sha256": "079849f62a21fec80267d73b1de2fd4845416f75ca4df2592ca044dd1c5b87e4",
       "bytes_exact": false,
       "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
       "purpose": "public projection status",
@@ -93,7 +104,7 @@
       "source_path": null,
       "source_git_blob": null,
       "source_sha256": null,
-      "destination_sha256": "ef2f6a2e35f0641e256ac0b0195975edd2788ba53350fd95c9c34bebe3f1d94e",
+      "destination_sha256": "735f7978767ae7888feec2a1bfe2293d18d257367b12c7ad351c518b043fd158",
       "bytes_exact": false,
       "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
       "purpose": "public project entrance",
@@ -104,7 +115,7 @@
       "source_path": null,
       "source_git_blob": null,
       "source_sha256": null,
-      "destination_sha256": "7a5ad5e5ff22cbd4a75e0156f4f81795ea732261c8f153ab475e713a392015fd",
+      "destination_sha256": "29da372bc9f6aa39cad9644b3768b64899e4d9600a1cbaa596c758e077a0cf82",
       "bytes_exact": false,
       "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
       "purpose": "third-party reference boundary",
@@ -463,5 +474,24 @@
     "wheel": "research_audit_kit-0.1.0rc2-py3-none-any.whl",
     "wheel_sha256": "71f905f3e39907c72c18e3d3207004f424c001238b103235a16484e1acace0fb",
     "scientific_validity_claim": "NONE"
+  },
+  "license_scope": {
+    "licensed": [
+      "author-owned source code",
+      "original repository documentation"
+    ],
+    "license": "Apache-2.0",
+    "not_licensed_by_this_repository": [
+      "datasets",
+      "model weights and checkpoints",
+      "generated outputs",
+      "provider and API responses",
+      "papers and supplementary manuscripts",
+      "conference templates",
+      "external dependencies",
+      "third-party software and assets",
+      "all excluded material"
+    ],
+    "external_dependency_policy": "SEPARATELY_LICENSED_REFERENCE_ONLY_NOT_COPIED"
   }
 }

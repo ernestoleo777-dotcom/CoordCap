@@ -1,7 +1,8 @@
 cff-version: 1.2.0
-message: "If you use this software after a public license is selected, cite the CoordCap project."
+message: "If you use this software, cite the CoordCap project."
 title: "CoordCap"
 type: software
+license: Apache-2.0
 authors:
   - family-names: Li
     given-names: Hongchen

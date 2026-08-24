@@ -6,6 +6,7 @@ policy:
     - .rak/policy.yaml
     - ASSET_PROVENANCE.md
     - CITATION.cff
+    - LICENSE
     - LICENSE_STATUS.md
     - PROJECT_STATUS.md
     - PUBLIC_PROJECTION_MANIFEST.json
@@ -37,6 +38,7 @@ policy:
     - .DS_Store
   required_files:
     - README.md
+    - LICENSE
     - PROJECT_STATUS.md
     - LICENSE_STATUS.md
     - CITATION.cff

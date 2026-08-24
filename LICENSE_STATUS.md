@@ -1,11 +1,14 @@
 # License status
 
 ```text
-OWNER_LICENSE_DECISION_REQUIRED
+AUTHOR_OWNED_CODE_LICENSE = Apache-2.0
+ORIGINAL_REPOSITORY_DOCUMENTATION_LICENSE = Apache-2.0
+EXTERNAL_DEPENDENCIES = SEPARATELY_LICENSED_NOT_COPIED
+EXCLUDED_OR_THIRD_PARTY_MATERIAL = NOT_LICENSED_BY_THIS_REPOSITORY
 ```
 
-No public software license has been selected or applied to this projection. The repository owner must explicitly select a license before public release. Until then, the presence of source files does not grant permission to use, modify, or redistribute them beyond rights already provided by law or separate agreement.
+The repository owner has authorized licensing the author-owned source code and original repository documentation contained in this projection under the Apache License 2.0. The complete license text is in [LICENSE](LICENSE).
 
-If the owner confirms that all included implementation is author-owned and chooses Apache-2.0, that license may be applied in a separately reviewed change. This sentence is a recommendation, not owner consent.
+This grant applies only where the CoordCap authors hold licensing rights. It does not apply to datasets, model weights or checkpoints, generated outputs, provider or API responses, papers or supplementary manuscripts, conference templates, external dependencies, third-party software or assets, or any content excluded from the projection.
 
-Software licensing does not grant rights to excluded datasets, model assets, provider outputs, manuscripts, conference templates, or third-party material.
+External dependencies remain governed by their respective licenses. No rights are granted through this repository for excluded or third-party material.

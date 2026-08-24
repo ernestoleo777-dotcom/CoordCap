@@ -8,9 +8,9 @@ This rights-scoped projection contains the author-owned Python implementation, t
 
 It intentionally excludes datasets, provider responses, API logs and caches, model weights, generated experiment results, reviewer or submission-system material, camera-ready or supplementary PDFs, conference templates, internal audits, and unrelated repository content. No experimental number or scientific claim was rewritten for this projection.
 
-## License status
+## License
 
-Public software licensing has not yet been selected. See [LICENSE_STATUS.md](LICENSE_STATUS.md). Until the owner selects and applies a license, this projection must not be represented as granting public reuse or redistribution rights. Dataset, model, paper, and third-party asset rights remain separate from any future software license.
+The author-owned source code and original repository documentation in this projection are licensed under the [Apache License 2.0](LICENSE) (`Apache-2.0`). See [LICENSE_STATUS.md](LICENSE_STATUS.md) for the precise scope. This grant does not cover datasets, model weights or checkpoints, generated outputs, provider responses, papers or supplementary manuscripts, conference templates, external dependencies, or third-party assets. Excluded material receives no license through this repository.
 
 ## Local environment
 
