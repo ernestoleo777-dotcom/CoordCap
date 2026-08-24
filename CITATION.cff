@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this software after a public license is selected, cite the CoordCap project."
+title: "CoordCap"
+type: software
+authors:
+  - family-names: Li
+    given-names: Hongchen
+abstract: "Implementation projection for the accepted CoordCap COLM 2026 project."

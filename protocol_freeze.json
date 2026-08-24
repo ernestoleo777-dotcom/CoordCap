@@ -1,0 +1,103 @@
+{
+  "analysis": {
+    "bootstrap_samples": 2000,
+    "bootstrap_seed": 20260717,
+    "failure_tiebreak": [
+      "failure_category",
+      "worst_principal_regret_desc",
+      "run_id"
+    ],
+    "resampling": "family_stratified_instance_cluster"
+  },
+  "budgets": {
+    "max_answer_tokens": [
+      512,
+      1024,
+      2048
+    ],
+    "max_model_calls": [
+      1,
+      2,
+      4
+    ],
+    "scope": "total_completion_tokens_and_total_calls_including_repair"
+  },
+  "capacity_gates": {
+    "hard_constraint_violation_rate_max": 0.05,
+    "joint_success_rate_min": 0.8,
+    "require_all_smaller_counts": true,
+    "worst_principal_regret_mean_max": 0.25
+  },
+  "conflict_density_intervals": {
+    "high": [
+      0.7,
+      0.9
+    ],
+    "low": [
+      0.15,
+      0.3
+    ],
+    "medium": [
+      0.4,
+      0.6
+    ]
+  },
+  "formal": {
+    "base_instance_count": 288,
+    "consistency_additional_runs": 192,
+    "consistency_order_variant": "reverse",
+    "consistency_panel_instances": 24,
+    "consistency_panel_rule": "for family index f and primary-count index c, select conflict_levels[(f+c) mod 3] and replicate index 0",
+    "consistency_panel_max_answer_tokens": 1024,
+    "consistency_panel_max_model_calls": 2,
+    "primary_expected_attempts": 20736,
+    "replicates_per_family_count_conflict_cell": 4
+  },
+  "freeze_date": "2026-07-17",
+  "master_seed": 20260717,
+  "methods": [
+    "direct_joint_prompt",
+    "sequential_aggregation",
+    "constraint_ledger",
+    "budget_aware_planner"
+  ],
+  "models": [
+    "google/gemini-3.1-flash-lite",
+    "openai/gpt-5.4-mini"
+  ],
+  "primary_principal_counts": [
+    2,
+    4,
+    6,
+    8
+  ],
+  "protocol_version": "coordcap-1.0.0",
+  "smoke": {
+    "expected_attempts": 320,
+    "instance_count": 40,
+    "max_answer_tokens": 512,
+    "max_model_calls": 2,
+    "principal_counts": [
+      2,
+      3,
+      4,
+      6,
+      8
+    ]
+  },
+  "status_at_freeze": {
+    "api_calls": 0,
+    "formal_results": false,
+    "smoke_results": false
+  },
+  "task_families": [
+    "resource_allocation",
+    "scheduling",
+    "shared_plan_selection",
+    "policy_choice",
+    "constrained_recommendation",
+    "conflicting_information_requests"
+  ],
+  "utility_scale_basis_points": 1000,
+  "urep": "deferred_not_found"
+}
