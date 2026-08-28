@@ -16,10 +16,10 @@
       "source_path": null,
       "source_git_blob": null,
       "source_sha256": null,
-      "destination_sha256": "a41951f3bb844b231a310b22bb370f13a033114d75b1a6b6a319a95e1e298aa9",
+      "destination_sha256": "e6e1e97d16d0b3b9f7f6fc886005e5cfed0a417989c0286c5bcbc4ad61dfa4c4",
       "bytes_exact": false,
       "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
-      "purpose": "pinned RC2 mechanical inventory CI workflow",
+      "purpose": "immutable RC3 composite Action mechanical audit CI workflow",
       "rights_class": "AUTHOR_OWNED_RIGHTS_CONFIRMED"
     },
     {
@@ -41,7 +41,7 @@
       "destination_sha256": "9be22af2580ec8a179bdabb1919fb03078a9372c36b0e5f327952f9c7c7d5df6",
       "bytes_exact": false,
       "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
-      "purpose": "consumer-specific mechanical repository inventory policy",
+      "purpose": "consumer-specific mechanical repository audit policy",
       "rights_class": "AUTHOR_OWNED_RIGHTS_CONFIRMED"
     },
     {
@@ -93,7 +93,7 @@
       "source_path": null,
       "source_git_blob": null,
       "source_sha256": null,
-      "destination_sha256": "079849f62a21fec80267d73b1de2fd4845416f75ca4df2592ca044dd1c5b87e4",
+      "destination_sha256": "babf00f879da65cffec40b8f6882b00495c1f7d5c069e8be50e731a5c31a58d7",
       "bytes_exact": false,
       "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
       "purpose": "public projection status",
@@ -104,7 +104,7 @@
       "source_path": null,
       "source_git_blob": null,
       "source_sha256": null,
-      "destination_sha256": "735f7978767ae7888feec2a1bfe2293d18d257367b12c7ad351c518b043fd158",
+      "destination_sha256": "b0c3af4dcdbcf27618b825b42b75941b5a0ce2403dff8519b0474618ae37aa98",
       "bytes_exact": false,
       "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
       "purpose": "public project entrance",
@@ -467,12 +467,12 @@
   ],
   "manifest_self_reference_policy": "PUBLIC_PROJECTION_MANIFEST.json is omitted from included_files to avoid a recursive self-hash; its exact bytes are bound by the independent Git commit and verification report.",
   "researchauditkit_integration": {
-    "use": "MECHANICAL_REPOSITORY_INTEGRITY_PREFLIGHT",
-    "command": "rak inventory",
-    "release": "v0.1.0-rc.2",
-    "tag_target": "967685bc313242dc1654665fd8516b5937f3fd59",
-    "wheel": "research_audit_kit-0.1.0rc2-py3-none-any.whl",
-    "wheel_sha256": "71f905f3e39907c72c18e3d3207004f424c001238b103235a16484e1acace0fb",
+    "use": "MECHANICAL_REPOSITORY_INTEGRITY_PREFLIGHT_VIA_COMPOSITE_ACTION",
+    "command": "rak audit",
+    "release": "v0.1.0-rc.3",
+    "tag_target": "72ee132038a36d8678da11e86d3b953726a5e9a7",
+    "wheel": "research_audit_kit-0.1.0rc3-py3-none-any.whl",
+    "wheel_sha256": "7baf52f7892f8f3f7469d738c6f0717367262b4456ebe3efd26ecae469ab67c8",
     "scientific_validity_claim": "NONE"
   },
   "license_scope": {
