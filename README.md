@@ -1,6 +1,6 @@
 # CoordCap
 
-CoordCap is the implementation accompanying the accepted, non-anonymous COLM 2026 project **“More Calls, Not Necessarily Better Coordination: A Budgeted Study of Multi-Principal Reasoning.”** Acceptance status is supplied by the repository owner; this local projection is not yet a public GitHub repository.
+CoordCap is the implementation accompanying the accepted, non-anonymous COLM 2026 project **“More Calls, Not Necessarily Better Coordination: A Budgeted Study of Multi-Principal Reasoning.”** Acceptance status is supplied by the repository owner; this is the rights-scoped public projection.
 
 ## Included scope
 
@@ -36,9 +36,9 @@ These checks do not reproduce the accepted experimental results.
 
 ## Mechanical repository integrity
 
-The local projection pins ResearchAuditKit `v0.1.0-rc.2` for a deterministic `rak inventory` preflight. The CI workflow downloads the exact GitHub Release wheel, verifies SHA-256 `71f905f3e39907c72c18e3d3207004f424c001238b103235a16484e1acace0fb`, and writes reports only to temporary runner storage.
+The public workflow consumes the released ResearchAuditKit `v0.1.0-rc.3` composite Action through immutable commit `72ee132038a36d8678da11e86d3b953726a5e9a7` and runs `rak audit` with the repository policy. The Action owns its Python and PyYAML bootstrap, writes temporary results only to runner-temporary storage, does not upload repository contents, and neither installs CoordCap dependencies nor executes CoordCap code. Bootstrap requires GitHub Action and Python package infrastructure; the repository analysis itself runs locally on the runner without a hosted ResearchAuditKit service.
 
-ResearchAuditKit checks declared repository files and forbidden transient-output patterns mechanically. Passing this preflight does not validate CoordCap's scientific claims, experimental conclusions, novelty, acceptance status, correctness, or reproducibility. ResearchAuditKit is a prerelease and is not installed from PyPI.
+ResearchAuditKit checks declared repository files and structurally observable release blockers mechanically. CoordCap and ResearchAuditKit share the same owner, so this is a self-owned public consumer integration, not independent external adoption. Passing the preflight does not validate CoordCap's scientific claims, experimental conclusions, novelty, acceptance status, correctness, or reproducibility. ResearchAuditKit remains a prerelease and is not installed from PyPI.
 
 ## Repository provenance
 
@@ -49,4 +49,4 @@ ResearchAuditKit checks declared repository files and forbidden transient-output
 
 ## Limitations
 
-This projection has not been independently adopted, is not yet hosted publicly, and does not contain the private or redistribution-sensitive assets required to rerun provider-backed experiments. Passing repository checks does not validate scientific claims, experimental correctness, novelty, publication merit, or general reproducibility.
+This public projection has not been independently adopted and does not contain the private or redistribution-sensitive assets required to rerun provider-backed experiments. Passing repository checks does not validate scientific claims, experimental correctness, novelty, publication merit, or general reproducibility.
