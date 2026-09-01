@@ -1,9 +1,21 @@
 cff-version: 1.2.0
-message: "If you use this software, cite the CoordCap project."
+message: "If you use this software, cite CoordCap and the preferred paper citation."
 title: "CoordCap"
 type: software
 license: Apache-2.0
 authors:
   - family-names: Li
     given-names: Hongchen
-abstract: "Implementation projection for the accepted CoordCap COLM 2026 project."
+abstract: "Rights-scoped public code projection for the accepted and frozen CoordCap paper."
+repository-code: "https://github.com/ernestoleo777-dotcom/CoordCap"
+url: "https://openreview.net/forum?id=xNdtZjgf7T"
+preferred-citation:
+  type: conference-paper
+  title: "More Calls, Not Necessarily Better Coordination: A Budgeted Study of Multi-Principal Reasoning"
+  authors:
+    - family-names: Li
+      given-names: Hongchen
+  conference:
+    name: "COLM 2026 — The 2nd Workshop on Efficient Reasoning"
+  year: 2026
+  url: "https://openreview.net/forum?id=xNdtZjgf7T"

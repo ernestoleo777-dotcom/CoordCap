@@ -1,6 +1,41 @@
 # CoordCap
 
-CoordCap is the implementation accompanying the accepted, non-anonymous COLM 2026 project **“More Calls, Not Necessarily Better Coordination: A Budgeted Study of Multi-Principal Reasoning.”** Acceptance status is supplied by the repository owner; this is the rights-scoped public projection.
+Public code projection for:
+
+**More Calls, Not Necessarily Better Coordination: A Budgeted Study of Multi-Principal Reasoning**
+
+Accepted at the **COLM 2026 Workshop on Efficient Reasoning**.
+
+- Paper: [OpenReview final forum](https://openreview.net/forum?id=xNdtZjgf7T)
+- Submission: #95
+- Publication status: `ACCEPTED_FROZEN`
+
+## Paper
+
+**More Calls, Not Necessarily Better Coordination: A Budgeted Study of Multi-Principal Reasoning**
+
+Hongchen Li<br>
+Institute for Advanced Study, Shenzhen University
+
+COLM 2026 — The 2nd Workshop on Efficient Reasoning
+
+[OpenReview](https://openreview.net/forum?id=xNdtZjgf7T)
+
+The final camera-ready paper is externally bound and frozen.
+
+## Scientific summary
+
+CoordCap studies finite-catalogue multi-principal decision making using deterministic local solver scoring. In the evaluated two-route, blind, model-generated, tool-free verification protocol, additional verification calls did not yield reliable coordination gains; a two-stage audit-and-revision condition increased cost and worsened pooled hard-constraint violations and regret.
+
+This result is specific to the evaluated protocol and does not imply that tool-grounded, externally verified, or general test-time reasoning is ineffective.
+
+## Status
+
+```text
+Publication: ACCEPTED_FROZEN
+Scientific work: COMPLETE
+Public projection: MAINTENANCE_ONLY
+```
 
 ## Included scope
 
