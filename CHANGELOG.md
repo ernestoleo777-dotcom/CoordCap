@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-02 — Offline usability upgrade
+
+- Add `python -m coordcap demo`, a newly authored educational task with bilingual output, optional JSON and explicit candidate inspection.
+- Compare the existing reference and independent solver implementations; preserve their source and scoring rules.
+- Add offline `validate` and `evaluate` dispatchers that preserve existing script arguments and failure exit codes. Evaluation still targets the earlier protocol.
+- Add CLI tests for known arithmetic, constraint failures, repeatability, help and invalid inputs.
+- Add a Python 3.11 GitHub functionality workflow for tests and the demo, alongside the existing integrity preflight.
+- No provider calls, historical result replacement or new scientific claim.
+
 ## 2026-11-02 — Public documentation maintenance
 
 - Add a complete Chinese README and reciprocal language links at the top of both READMEs.

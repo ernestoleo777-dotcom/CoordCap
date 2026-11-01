@@ -1,0 +1,28 @@
+name: Offline functionality checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install declared dependencies
+        run: python -m pip install -r requirements.lock.txt
+      - name: Run local tests (no provider requests)
+        run: python -m pytest -q tests
+      - name: Run educational offline demo
+        run: python -m coordcap demo
+      - name: Inspect offline command interfaces
+        run: |
+          python -m coordcap validate --help
+          python -m coordcap evaluate --help

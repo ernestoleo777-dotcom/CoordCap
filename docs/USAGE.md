@@ -19,6 +19,24 @@ On Windows, activate with `.venv\Scripts\activate` instead. Dependency installat
 
 Windows 环境使用 `.venv\Scripts\activate`。安装依赖需要访问软件包服务；轻量测试使用本地输入与模拟通信，不调用模型服务，不复现论文结果。
 
+## Unified offline commands / 统一离线命令
+
+```bash
+python -m coordcap demo
+python -m coordcap demo --plan morning_over_budget
+python -m coordcap demo --json
+python -m coordcap validate --help
+python -m coordcap evaluate --help
+```
+
+`demo` creates an in-memory educational example, without reading datasets, writing files or contacting providers. Two teams value different meeting times (600 points) and privacy (400 points). Cost must not exceed 3. A public evening plan is feasible but dominated by the private evening plan; an over-budget morning plan violates shared and team constraints. Per-team regret is the nonnegative difference from that team's best feasible utility. Utility and regret are still displayed for infeasible plans, but do not make them acceptable. Reference selection maximizes weighted welfare, minimizes worst regret, then breaks ties using canonical plan ordering; it does not imply a unique fair choice. `--plan` inspects a chosen candidate, and an infeasible candidate is a successful inspection rather than a CLI failure. `--json` returns the full task and evaluations with an explicit educational scope label.
+
+`demo` 在内存中创建教学示例，不读取数据集、不写文件、不访问服务。两队各自的时间偏好占600分，私密性占400分，费用上限为3。公开晚间方案可行但被私密晚间方案支配；超预算上午方案违反共享及各队约束。每队后悔值为其最佳可行效用与当前效用之差，最低为0；不可行方案即使有效用或较低后悔值也不被接纳。参考选择按加权总效用、最差后悔值、规范排序依次决胜，不代表唯一公平选择。`--plan` 用于检查指定候选，检查到不可行方案仍正常退出；`--json` 输出完整任务和评分，并明确标注教学用途。
+
+`validate` forwards arguments and exit codes to `scripts/validate_manifest.py`; `evaluate` does the same for the earlier-protocol `scripts/evaluate.py`. No model-running command is exposed by this CLI. These wrappers require the repository checkout and retain the original inputs and failure behavior. Use explicit input paths when evaluating saved records.
+
+`validate` 与 `evaluate` 分别转交参数给既有清单校验脚本与早期评价脚本，并保留其退出码；需要完整仓库目录。统一入口不提供模型运行命令。评价保存记录时请明确指定输入路径。
+
 ## Protocol map / 协议区别
 
 | Implementation | Role |

@@ -18,3 +18,7 @@ Source files were relocated into a standalone CoordCap layout without byte chang
 Datasets and copies, weights and checkpoints, provider responses, API caches and request logs, generated experiment results, reviewer or submission records, anonymous-review material, internal audit and governance records, PDFs and conference templates, unrelated repository content, and any third-party asset with unresolved redistribution rights were not copied.
 
 The projection manifest intentionally does not enumerate confidential excluded filenames. Its own hash is not embedded within itself; the enclosing Git commit and final verification report bind the manifest bytes without recursive self-reference.
+
+## Offline usability maintenance (2026-11-02)
+
+`coordcap/demo.py`, `coordcap/__main__.py`, `tests/test_cli.py` and the offline functionality workflow are newly authored public additions, not byte-for-byte exports from the original source commit. The demo task is educational material, not a historical experiment record. Existing solver and frozen protocol files remain unchanged. The public manifest records these additions and refreshed documentation hashes separately from original copied assets.

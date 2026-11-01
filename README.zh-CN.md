@@ -29,6 +29,26 @@ COLM 2026 第二届 Efficient Reasoning **Workshop** 已接收论文的公开代
 | `scripts/`、`tests/` | 命令行工具与本地轻量检查 |
 | `docs/USAGE.md` | 环境、离线检查、输入文件与协议区别 |
 
+## 运行离线演示
+
+安装依赖后，在仓库根目录执行：
+
+```bash
+python -m coordcap demo
+```
+
+这个新建教学任务包含两队与四个会议方案，展示各方案的硬约束违反、效用和后悔值，并核对两套求解实现是否一致，给出确定性的参考选择。无需 API 密钥，不调用模型服务。它不是论文任务、模型预测或原研究复现。
+
+也可以主动选择超预算方案查看失败原因，或输出 JSON：
+
+```bash
+python -m coordcap demo --plan morning_over_budget
+python -m coordcap demo --json
+python -m coordcap --help
+```
+
+统一离线入口还提供 `validate` 与 `evaluate`；后者封装的是早期协议评价器，不能替代最终论文精简协议评价。详见[使用指南](docs/USAGE.md)。GitHub 会自动执行测试与演示；这些工程检查不验证论文结果。
+
 ## 开始使用
 
 在仓库根目录创建环境并安装依赖：

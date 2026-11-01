@@ -2,6 +2,7 @@ policy:
   id: coordcap-public-projection-v1
   include_patterns:
     - .gitignore
+    - .github/workflows/offline-checks.yml
     - .github/workflows/research-integrity.yml
     - .rak/policy.yaml
     - ASSET_PROVENANCE.md
@@ -57,6 +58,7 @@ policy:
     - scripts/generate_coordcap.py
     - tests/test_generator.py
     - .rak/policy.yaml
+    - .github/workflows/offline-checks.yml
     - .github/workflows/research-integrity.yml
   warning_only_classes:
     - volatile_metadata

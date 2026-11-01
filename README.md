@@ -63,6 +63,26 @@ The author-owned source code and original repository documentation in this proje
 
 The accepted main study contains 80 tasks and 640 scored attempts. The 24-task budget panel has 144 records, including 48 reused B0 records; these are not all additional independent observations. The historical `protocol_freeze.json` describes an earlier 288-instance matrix, not the final paper's compact study. The public repository does not include the historical result records. See the [protocol map](docs/USAGE.md#protocol-map--协议区别) before using the runners or evaluators.
 
+## Try the offline demo
+
+After installing the dependencies, run:
+
+```bash
+python -m coordcap demo
+```
+
+A newly authored educational task compares four meeting plans for two teams. The output shows each plan's hard-constraint violations, utilities and regret, checks two separate solver implementations, and selects a deterministic reference plan. It needs no API key and makes no provider requests. It is not a paper task, a model prediction, or a reproduction of the accepted results.
+
+Choose an over-budget plan to inspect a failure, or request structured output:
+
+```bash
+python -m coordcap demo --plan morning_over_budget
+python -m coordcap demo --json
+python -m coordcap --help
+```
+
+The unified offline entry point also exposes `validate` and `evaluate`; the latter wraps the earlier-protocol evaluator, not the final compact study. See the [usage guide](docs/USAGE.md). GitHub runs the existing tests and demo in a separate functionality workflow; passing checks do not validate paper results.
+
 ## Local environment
 
 The recorded Python dependency set is in `requirements.lock.txt`. A local development environment can be prepared with:
