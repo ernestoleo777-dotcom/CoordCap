@@ -38,7 +38,7 @@
       "source_path": null,
       "source_git_blob": null,
       "source_sha256": null,
-      "destination_sha256": "9be22af2580ec8a179bdabb1919fb03078a9372c36b0e5f327952f9c7c7d5df6",
+      "destination_sha256": "a3b65a37d5ca9ca26f419a72f80f9fdce78046d38e8c55b1f3829b56d032c4fb",
       "bytes_exact": false,
       "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
       "purpose": "consumer-specific mechanical repository audit policy",
@@ -104,7 +104,7 @@
       "source_path": null,
       "source_git_blob": null,
       "source_sha256": null,
-      "destination_sha256": "18e8a147d9e8e8e41f622957d6312e3d18b3d4d4897e16bd1932cad5de2edc03",
+      "destination_sha256": "fc8babb346fd3b218b5fdb992cc23a9218aef2f577895826fd8e79494730d277",
       "bytes_exact": false,
       "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
       "purpose": "public project entrance",
@@ -450,6 +450,39 @@
       "transformation": "EXACT_BYTES_PATH_RELOCATION",
       "purpose": "lightweight CPU-only test",
       "rights_class": "AUTHOR_OWNED_RIGHTS_CONFIRMED"
+    },
+    {
+      "destination_path": "README.zh-CN.md",
+      "source_path": null,
+      "source_git_blob": null,
+      "source_sha256": null,
+      "destination_sha256": "58f02de508d2aaf1644f327733fa15387f6d94036f2b664bfd2a770430b1a802",
+      "bytes_exact": false,
+      "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
+      "purpose": "Bilingual public documentation and maintenance navigation",
+      "rights_class": "AUTHOR_OWNED_RIGHTS_CONFIRMED"
+    },
+    {
+      "destination_path": "docs/USAGE.md",
+      "source_path": null,
+      "source_git_blob": null,
+      "source_sha256": null,
+      "destination_sha256": "3101ecc3143e466868d055c64f3653242c4d4d6687be1148f7cbb9939d2ada01",
+      "bytes_exact": false,
+      "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
+      "purpose": "Bilingual public documentation and maintenance navigation",
+      "rights_class": "AUTHOR_OWNED_RIGHTS_CONFIRMED"
+    },
+    {
+      "destination_path": "CHANGELOG.md",
+      "source_path": null,
+      "source_git_blob": null,
+      "source_sha256": null,
+      "destination_sha256": "43e9ac162f1f5c2723bbc46098cad655ed28b1a64f7354f7f0cd37d297dea865",
+      "bytes_exact": false,
+      "transformation": "NEW_PUBLIC_PROJECTION_METADATA",
+      "purpose": "Bilingual public documentation and maintenance navigation",
+      "rights_class": "AUTHOR_OWNED_RIGHTS_CONFIRMED"
     }
   ],
   "excluded_content_classes": [
@@ -493,5 +526,10 @@
       "all excluded material"
     ],
     "external_dependency_policy": "SEPARATELY_LICENSED_REFERENCE_ONLY_NOT_COPIED"
+  },
+  "documentation_maintenance": {
+    "date": "2026-11-02",
+    "base_public_commit": "837feb1e5788b627169634b6a12cb768eb78a0d2",
+    "scope": "Documentation and integrity-policy maintenance only; source code and scientific assets unchanged."
   }
 }

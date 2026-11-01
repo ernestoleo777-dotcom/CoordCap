@@ -1,5 +1,7 @@
 # CoordCap
 
+**English** | [中文说明](README.zh-CN.md)
+
 Public code projection for:
 
 **More Calls, Not Necessarily Better Coordination: A Budgeted Study of Multi-Principal Reasoning**
@@ -46,6 +48,20 @@ It intentionally excludes datasets, provider responses, API logs and caches, mod
 ## License
 
 The author-owned source code and original repository documentation in this projection are licensed under the [Apache License 2.0](LICENSE) (`Apache-2.0`). See [LICENSE_STATUS.md](LICENSE_STATUS.md) for the precise scope. This grant does not cover datasets, model weights or checkpoints, generated outputs, provider responses, papers or supplementary manuscripts, conference templates, external dependencies, or third-party assets. Excluded material receives no license through this repository.
+
+## Repository guide
+
+| Path | Contents |
+|---|---|
+| `coordcap/tasks.py`, `oracle.py`, `validation.py` | Deterministic tasks, reference solver and independent checks |
+| `coordcap/compact_protocol.py`, `compact_runner.py`, `compact_evaluation.py` | Compact decision protocol, formal-main execution checks and evaluation |
+| `coordcap/verification_ablation.py` | Budget-verification contrast implementation |
+| `protocol_freeze.json`, `coordcap/runner.py`, `coordcap/evaluation.py` | Earlier protocol configuration and implementation |
+| `scripts/`, `tests/` | Command-line tools and lightweight local checks |
+| [Usage guide](docs/USAGE.md) | Setup, protocol distinctions and evaluation input requirements (English / 中文) |
+| [Citation](CITATION.cff), [changelog](CHANGELOG.md) | Paper citation and public maintenance history |
+
+The accepted main study contains 80 tasks and 640 scored attempts. The 24-task budget panel has 144 records, including 48 reused B0 records; these are not all additional independent observations. The historical `protocol_freeze.json` describes an earlier 288-instance matrix, not the final paper's compact study. The public repository does not include the historical result records. See the [protocol map](docs/USAGE.md#protocol-map--协议区别) before using the runners or evaluators.
 
 ## Local environment
 
